@@ -1,0 +1,13 @@
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\obj\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\obj\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.AssemblyInfoInputs.cache
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\obj\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.AssemblyInfo.cs
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\obj\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.csproj.CoreCompileInputs.cache
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\bin\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.deps.json
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\bin\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.dll
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\bin\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.pdb
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\bin\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.dll
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\bin\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.pdb
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\obj\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.csproj.CopyComplete
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\obj\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.dll
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\obj\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.pdb
+C:\Users\om\source\repos\Practical 28\EmployeeManagementDBLibrary\obj\Debug\netcoreapp3.1\EmployeeManagementDBLibrary.csproj.AssemblyReference.cache

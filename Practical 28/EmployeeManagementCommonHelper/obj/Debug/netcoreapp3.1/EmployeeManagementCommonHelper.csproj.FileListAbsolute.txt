@@ -1,0 +1,10 @@
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\bin\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.deps.json
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\bin\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.dll
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\bin\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.pdb
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\obj\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.csproj.AssemblyReference.cache
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\obj\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\obj\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.AssemblyInfoInputs.cache
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\obj\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.AssemblyInfo.cs
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\obj\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.csproj.CoreCompileInputs.cache
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\obj\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.dll
+C:\Users\om\source\repos\Practical 28\EmployeeManagementCommonHelper\obj\Debug\netcoreapp3.1\EmployeeManagementCommonHelper.pdb

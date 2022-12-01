@@ -1,0 +1,81 @@
+﻿@model EmployeeManagementCommonHelper.ViewModel.EmployeeDetails
+
+@{
+    ViewData["Title"] = "UpdateEmployeeDetails";
+}
+
+<h4>Update EmployeeDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateEmployeeDetails" ,"Home", FormMethod.Post, enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" id="Name"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DesignationId" class="control-label"></label>
+                @*<input asp-for="DesignationId" class="form-control" />*@
+                <select asp-for="DesignationId" class="form-control" asp-items="@(new SelectList(Model.DesignationList,"Value", "Text"))"> </select>
+                <span asp-validation-for="DesignationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfilePicture" class="control-label"></label>
+                @*<input asp-for="ProfilePicture" class="form-control" />
+                    <span asp-validation-for="ProfilePicture" class="text-danger"></span>*@
+                <img src="~/Image/@ViewBag.FileName" style="width:50px;height:50px;" />
+                <input type="file" name="ImageFile" required id="FileName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label"></label>
+                <input asp-for="Salary" class="form-control" id="Salary"/>
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOfBirth" class="control-label"></label>
+                <input asp-for="DateOfBirth" class="form-control" id="DateofBirth"/>
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" id="adderess"/>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" id="Email"/>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" id="btnSave" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="EmployeeInfo">Back to List</a>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#btnSave').prop("disabled", false);
+        $('#Email, #adderess,#DateofBirth,#Salary,#Name').change(function () {
+            if ($('#adderess').val().length > 0 &&
+                $('#Email').val().length > 0 &&
+                $('#DateofBirth').val().length > 0 &&
+                $('#Salary').val().length > 0 &&
+                $('#Name').val().length > 0 ) {
+                $('#btnSave').prop("disabled", false);
+            }
+            else {
+
+                $('#btnSave').prop("disabled", true);
+            }
+        });
+    });
+</script>
+
