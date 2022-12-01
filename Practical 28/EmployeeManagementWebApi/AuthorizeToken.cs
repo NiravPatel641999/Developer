@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -17,6 +19,7 @@ namespace EmployeeManagementWebApi
     {
         /// <summary>Called when [authorization].</summary>
         /// <param name="filterContext">The filter context.</param>
+        public string validToken;
         public void OnAuthorization(AuthorizationFilterContext filterContext)
         {
             if (filterContext != null)
@@ -24,6 +27,7 @@ namespace EmployeeManagementWebApi
                 Microsoft.Extensions.Primitives.StringValues authTokens;
                 filterContext.HttpContext.Request.Headers.TryGetValue("authToken", out authTokens);
 
+                validToken = authTokens.FirstOrDefault();
                 var _token = authTokens.FirstOrDefault();
                 if (_token != null)
                 {
@@ -74,10 +78,21 @@ namespace EmployeeManagementWebApi
                 }
             }
         }
-
         public bool IsValidToken(string authToken)
         {
             //validate Token here  
+            if (authToken == null)
+            {
+                return false;
+            }
+            else if(authToken == string.Empty)
+            {
+                return false;
+            }
+            else if(authToken != validToken)
+            {
+                return false;
+            }
             return true;
         }
     }

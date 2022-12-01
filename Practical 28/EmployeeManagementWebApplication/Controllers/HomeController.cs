@@ -101,7 +101,11 @@ namespace EmployeeManagementWebApplication.Controllers
                 {
                     return RedirectToAction("Login");
                 }
-                if (response.IsSuccessStatusCode)
+                else if (response.ReasonPhrase == "Not Authorized")
+                {
+                    return RedirectToAction("Login");
+                }
+                else if (response.IsSuccessStatusCode)
                 {
                     var display = response.Content.ReadAsAsync<List<EmployeeDetails>>().Result;
                     list = display;
