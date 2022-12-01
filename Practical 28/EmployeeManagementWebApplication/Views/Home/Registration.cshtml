@@ -140,10 +140,8 @@
                             <i class="fa fa-paper-plane"></i>
                         </span>
                     </div>
-                    @*@Html.TextBoxFor(model => model.Email, htmlAttributes: new { @class = "form-control", @placeholder = "Email Address", @type = "email", @required = "required", @name = "email" })*@
                     @*<input type="email" class="form-control" name="email" placeholder="Email Address" required="required">*@
-                    @*@Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })*@
-                    <input asp-for="Email" class="form-control" placeholder="Email Address" required="required" type="email"/>
+                    <input asp-for="Email" class="form-control" placeholder="Email Address" required="required" type="email" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
             </div>
@@ -154,9 +152,7 @@
                             <i class="fa fa-lock"></i>
                         </span>
                     </div>
-                    @*@Html.PasswordFor(model => model.Password, htmlAttributes: new { @class = "form-control", @placeholder = "Password", @required = "required", @name = "password", @type = "password" })*@
                     @*<input type="text" class="form-control" name="password" placeholder="Password" required="required">*@
-                    @*@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })*@
                     <input asp-for="Password" class="form-control" placeholder="Password" required="required" type="password" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
@@ -169,8 +165,6 @@
                             <i class="fa fa-check"></i>
                         </span>
                     </div>
-                    @*@Html.PasswordFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "form-control", @placeholder = "Confirm Password", @required = "required", @type = "password" })
-                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })*@
                     @*<input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">*@
                     <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password" required="required" type="password" />
                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
@@ -187,5 +181,7 @@
     </div>
 </body>
 </html>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 
