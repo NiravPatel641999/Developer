@@ -61,6 +61,19 @@ namespace EmployeeManagementWebApi
                         }
 
                     }
+                    else
+                    {
+                        filterContext.HttpContext.Response.StatusCode = (int)HttpStatusCode.ExpectationFailed;
+                        filterContext.HttpContext.Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "Please Provide authToken";
+                        filterContext.Result = new JsonResult("Please Provide authToken")
+                        {
+                            Value = new
+                            {
+                                Status = "Error",
+                                Message = "Please Provide authToken"
+                            },
+                        };
+                    }
 
                 }
                 else
