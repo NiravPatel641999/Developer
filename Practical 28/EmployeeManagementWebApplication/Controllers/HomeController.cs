@@ -101,11 +101,7 @@ namespace EmployeeManagementWebApplication.Controllers
                 {
                     return RedirectToAction("Login");
                 }
-                else if (response.ReasonPhrase == "Not Authorized")
-                {
-                    return RedirectToAction("Login");
-                }
-                else if(response.ReasonPhrase == "Please Provide authToken")
+                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
                 {
                     return RedirectToAction("Login");
                 }
@@ -181,11 +177,7 @@ namespace EmployeeManagementWebApplication.Controllers
                 {
                     return RedirectToAction("Login");
                 }
-                else if (response.ReasonPhrase == "Not Authorized")
-                {
-                    return RedirectToAction("Login");
-                }
-                else if (response.ReasonPhrase == "Please Provide authToken")
+                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
                 {
                     return RedirectToAction("Login");
                 }
@@ -215,11 +207,7 @@ namespace EmployeeManagementWebApplication.Controllers
                 {
                     return RedirectToAction("Login");
                 }
-                else if (response.ReasonPhrase == "Not Authorized")
-                {
-                    return RedirectToAction("Login");
-                }
-                else if (response.ReasonPhrase == "Please Provide authToken")
+                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
                 {
                     return RedirectToAction("Login");
                 }
@@ -270,11 +258,7 @@ namespace EmployeeManagementWebApplication.Controllers
                 {
                     return RedirectToAction("Login");
                 }
-                else if (response.ReasonPhrase == "Not Authorized")
-                {
-                    return RedirectToAction("Login");
-                }
-                else if (response.ReasonPhrase == "Please Provide authToken")
+                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
                 {
                     return RedirectToAction("Login");
                 }
@@ -301,11 +285,7 @@ namespace EmployeeManagementWebApplication.Controllers
                 {
                     return RedirectToAction("Login");
                 }
-                else if (response.ReasonPhrase == "Not Authorized")
-                {
-                    return RedirectToAction("Login");
-                }
-                else if (response.ReasonPhrase == "Please Provide authToken")
+                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
                 {
                     return RedirectToAction("Login");
                 }
