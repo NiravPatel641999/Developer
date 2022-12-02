@@ -97,11 +97,7 @@ namespace EmployeeManagementWebApplication.Controllers
             {
                 client.DefaultRequestHeaders.Add("authToken", jwt); // Set token in header
                 var response = client.GetAsync("http://localhost:54943/EmployeeDetails/GetEmployeeDetails").Result;
-                if (response.StatusCode == (System.Net.HttpStatusCode)417)
-                {
-                    return RedirectToAction("Login");
-                }
-                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
+                if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken")|| (response.StatusCode == (System.Net.HttpStatusCode)417))
                 {
                     return RedirectToAction("Login");
                 }
@@ -141,6 +137,11 @@ namespace EmployeeManagementWebApplication.Controllers
             EmployeeDetails employeeDesignation = new EmployeeDetails();
             var designation = GetDesignation();
             employeeDesignation.DesignationList = new SelectList(designation, "Id", "Designation");
+            var jwt = Request.Cookies["jwtCookie"];
+            if((jwt == null)||(jwt == ""))
+            {
+                return RedirectToAction("Login");
+            }
             return View(employeeDesignation);
         }
         /// <summary>Adds the new employee details.</summary>
@@ -173,11 +174,7 @@ namespace EmployeeManagementWebApplication.Controllers
             {
                 client.DefaultRequestHeaders.Add("authToken", jwt);
                 var response = client.PostAsJsonAsync("http://localhost:54943/EmployeeDetails/InsertNewEmployeeDetails", model).Result;
-                if (response.StatusCode == (System.Net.HttpStatusCode)417)
-                {
-                    return RedirectToAction("Login");
-                }
-                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
+                if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken") || (response.StatusCode == (System.Net.HttpStatusCode)417))
                 {
                     return RedirectToAction("Login");
                 }
@@ -203,11 +200,7 @@ namespace EmployeeManagementWebApplication.Controllers
             {
                 client.DefaultRequestHeaders.Add("authToken", jwt);
                 var response = client.GetAsync("http://localhost:54943/EmployeeDetails/SelectEmployeeDetails?id="+id.ToString()).Result;
-                if (response.StatusCode == (System.Net.HttpStatusCode)417)
-                {
-                    return RedirectToAction("Login");
-                }
-                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
+                if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken") || (response.StatusCode == (System.Net.HttpStatusCode)417))
                 {
                     return RedirectToAction("Login");
                 }
@@ -254,11 +247,7 @@ namespace EmployeeManagementWebApplication.Controllers
             {
                 client.DefaultRequestHeaders.Add("authToken", jwt);
                 var response = client.PutAsJsonAsync("http://localhost:54943/EmployeeDetails/UpdateEmployeeDetails", model).Result;
-                if (response.StatusCode == (System.Net.HttpStatusCode)417)
-                {
-                    return RedirectToAction("Login");
-                }
-                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
+                if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken") || (response.StatusCode == (System.Net.HttpStatusCode)417))
                 {
                     return RedirectToAction("Login");
                 }
@@ -281,11 +270,7 @@ namespace EmployeeManagementWebApplication.Controllers
             {
                 client.DefaultRequestHeaders.Add("authToken", jwt);
                 var response = client.DeleteAsync("http://localhost:54943/EmployeeDetails/DeleteEmployeeDetails?id=" + id.ToString()).Result;
-                if (response.StatusCode == (System.Net.HttpStatusCode)417)
-                {
-                    return RedirectToAction("Login");
-                }
-                else if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken"))
+                if ((response.ReasonPhrase == "Not Authorized") || (response.ReasonPhrase == "Please Provide authToken") || (response.StatusCode == (System.Net.HttpStatusCode)417))
                 {
                     return RedirectToAction("Login");
                 }
